@@ -1,0 +1,12 @@
+crash/
+.vscode/
+.venv/
+checkpoints/
+dataset_original/
+models/not_use/
+compare_img/not_use/
+*/not_use/
+compare_img/*/*/
+weights/
+not_use/
+
