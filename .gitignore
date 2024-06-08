@@ -9,4 +9,5 @@ compare_img/not_use/
 compare_img/*/*/
 weights/
 not_use/
+gan/
 
