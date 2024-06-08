@@ -1,0 +1,81 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{amsmath,graphicx}
+
+\title{Aerial Image Semantic Segmentation}
+\author{
+    \IEEEauthorblockN{Chinatip Lawansuk}
+    \IEEEauthorblockA{
+        Department of Electrical Engineering and Computer Science\\
+        National Taipei University of Technology\\
+        Email: t112998405@ntut.edu.tw
+    }
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Aerial image semantic segmentation is a crucial task in remote sensing and geographic information systems (GIS). This report provides an overview of the methods and techniques used in semantic segmentation of aerial images, discusses the challenges involved, and highlights recent advancements in the field. The report also covers the evaluation metrics commonly used to assess the performance of segmentation models.
+\end{abstract}
+
+
+\section{Introduction}
+Surveying land usage is critical for sustainable development, environmental conservation, and efficient resource management. Traditional land surveying techniques, while foundational, are often limited by their scalability, accuracy, and reliance on extensive human intervention. The advent of aerial imagery has revolutionised this field, offering high-resolution and comprehensive coverage of vast areas, significantly enhancing the efficiency and accuracy of land surveys. However, interpreting these images using traditional algorithms, such as manual interpretation, supervised and unsupervised classification, edge detection, and segmentation, poses challenges including high labour costs, human error, and sensitivity to data variability.
+
+In recent years, deep learning, particularly convolutional neural networks (CNNs), has emerged as a powerful tool for image segmentation. Among these, the U-Net architecture stands out for its ability to combine high-level contextual information with precise localisation, making it particularly effective for complex image segmentation tasks. U-Net's symmetric encoder-decoder structure, augmented with skip connections, facilitates the retention of fine-grained details, which is crucial for accurately delineating land features in aerial imagery. Enhanced variants such as Deep U-Net further improve segmentation accuracy by incorporating deeper networks and advanced techniques like attention mechanisms and multi-scale processing.
+
+This work explores the application of U-Net and its deep variants in the segmentation of aerial images, demonstrating how these architectures address the limitations of traditional methods. Additionally, we focus on the critical aspects of data preparation and preprocessing, which are essential for improving the performance of deep learning models. Proper data preparation, including tasks such as noise reduction, image enhancement, and augmentation, ensures that the models are trained on high-quality datasets, thereby enhancing their robustness and generalisation capabilities.
+
+By leveraging the strengths of deep learning and thorough data preparation, this approach aims to enhance the precision, scalability, and efficiency of land use surveys, ultimately contributing to better-informed decision-making in urban planning, environmental monitoring, and resource management.
+
+
+
+\section{Dataset}
+describe where dataset from
+\subsection{Data Preprocessing}
+\subsubsection{Crop}
+why crop
+\subsubsection{split}
+why split
+
+also published
+
+
+\section{Methods}
+The methods for aerial image semantic segmentation can be broadly categorized into traditional image processing techniques and deep learning-based approaches.
+
+\subsection{Traditional Methods}
+Traditional methods include techniques such as thresholding, clustering, and edge detection. These methods rely on handcrafted features and are often limited in their ability to handle complex and high-resolution images.
+
+\subsection{Deep Learning-Based Methods}
+Recent advancements in deep learning have significantly improved the performance of semantic segmentation. Convolutional Neural Networks (CNNs) and their variants, such as Fully Convolutional Networks (FCNs), U-Net, and SegNet, have been widely adopted. These models leverage large-scale annotated datasets and powerful computational resources to learn hierarchical features directly from the data.
+
+\section{Challenges}
+Several challenges are associated with aerial image semantic segmentation:
+\begin{itemize}
+    \item \textbf{Scale Variation:} Aerial images often contain objects of varying scales, making it difficult for models to accurately segment small and large objects simultaneously.
+    \item \textbf{Occlusions:} Objects in aerial images can be occluded by other objects, leading to incomplete or inaccurate segmentation.
+    \item \textbf{Class Imbalance:} Some classes, such as buildings or roads, may be overrepresented in the dataset, while others, like water bodies, may be underrepresented.
+\end{itemize}
+
+\section{Recent Advancements}
+Recent advancements in aerial image semantic segmentation include the use of attention mechanisms, multi-scale feature fusion, and adversarial training. These techniques have enhanced the ability of models to capture contextual information and improve segmentation accuracy.
+
+\section{Evaluation Metrics}
+Common evaluation metrics for semantic segmentation include:
+\begin{itemize}
+    \item \textbf{Intersection over Union (IoU):} Measures the overlap between the predicted segmentation and the ground truth.
+    \item \textbf{Pixel Accuracy:} The ratio of correctly classified pixels to the total number of pixels.
+\end{itemize}
+
+\section{Conclusion}
+Aerial image semantic segmentation is a vital task with numerous applications. While traditional methods have laid the groundwork, deep learning-based approaches have brought significant improvements. Despite the challenges, ongoing research continues to push the boundaries of what is possible in this field.
+
+\section*{Acknowledgment}
+The author would like to thank the National Taipei University of Technology for providing the necessary resources and support for this research.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
