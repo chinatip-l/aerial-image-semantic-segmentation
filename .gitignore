@@ -10,6 +10,6 @@ compare_img/*/*/
 weights/
 not_use/
 gan/
-report.*
-!report.pdf
-!report.tex
+report*.*
+!report*.pdf
+!report*.tex
