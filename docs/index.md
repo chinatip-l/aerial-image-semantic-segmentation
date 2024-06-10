@@ -32,7 +32,7 @@ img {
 }
 </style>
 
-# Deep Learning for Satellite Image Semantic Segmentation
+# Aerial Image Sementic Segmentation
 
 ## Chinatip Lawansuk
 Department of Electrical Engineering and Computer Science  
