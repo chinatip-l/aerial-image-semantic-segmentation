@@ -66,7 +66,6 @@ Additionally, we have published the processed dataset on Kaggle for sharing, all
 ![](/assets/data_prep.png)
 ![Fig. 1: Dataset shows original image and split masks](/assets/data_prep2.png)
 
-
 ## III. MODEL ARCHITECTURE
 In this work, we utilise the U-Net model, delving into both its architectural design and activation functions. By optimising these aspects, we aim to enhance the model’s performance and accuracy in image segmentation tasks. Our exploration includes experimenting with various configurations to identify the most effective combination for our specific applications.
 
@@ -90,7 +89,6 @@ We then evaluate the model, as shown in Table I.
 |------------|------|------|
 | Parameters | 12.47 M | 8.45 M |
 | Memory     | 47.59 MB | 32.27 MB |
-
 
 The Multiple Model Single Channel approach takes smaller parameter count and memory usage compared to the Single Model Multiple Channel method. This is because the former splits the task into 6 distinct submodules, each handling a single channel, resulting in smaller individual models. However, training the Multiple Model Single Channel configuration takes more time since it requires updating gradients 6 times, once for each submodule.
 
