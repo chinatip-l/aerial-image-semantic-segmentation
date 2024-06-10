@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Aerial Image Sementic Segmentation
+title: Aerial Image Semantic Segmentation
 permalink: /
 date:   2024-06-03 19:34:25
 image: /assets/images/main_primary.png
@@ -32,7 +32,7 @@ img {
 }
 </style>
 
-# Aerial Image Sementic Segmentation
+# Aerial Image Semantic Segmentation
 
 ## Chinatip Lawansuk
 Department of Electrical Engineering and Computer Science  
