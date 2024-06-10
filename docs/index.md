@@ -37,9 +37,9 @@ img {
 ## Chinatip Lawansuk
 Department of Electrical Engineering and Computer Science  
 National Taipei University of Technology  
-Email: t112998405@ntut.edu.tw
+Email: l.chinatip@gmail.com
 
-### Abstract
+### Summary
 Aerial image semantic segmentation is a crucial task in remote sensing and geographic information systems (GIS). This report provides an overview of methods and techniques used in semantic segmentation of aerial images, discusses the challenges involved, and highlights recent advancements in the field. Utilising the U-Net architecture and its deep variants, we demonstrate how these models address limitations of traditional methods by improving accuracy and efficiency in land use surveys. Our study includes a performance comparison of different activation functions, with ReLu achieving the highest Mean IoU at 0.896, followed by Leaky ReLu at 0.829, and Tanh at 0.763. We also compare Multiple Model Single Channel (MMSC) and Single Model Multiple Channel (SMMC) architectures, finding SMMC more effective with 8.45 million parameters and 32.27 MB memory usage. Real-world application on Google Maps data showcases the model’s capabilities and areas for improvement, emphasising its potential for urban planning, environmental monitoring, and resource management.
 
 ![Aerial Image](/assets/im_full.jpg)
