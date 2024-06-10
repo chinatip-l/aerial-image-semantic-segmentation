@@ -4,7 +4,7 @@
 \usepackage{hyperref}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
-\title{Aerial Image Semantic Segmentation}
+\title{Deep Learning for Satellite Image Semantic Segmentation}
 \author{
     \IEEEauthorblockN{Chinatip Lawansuk}
     \IEEEauthorblockA{
@@ -251,26 +251,26 @@ In this evaluation of mean Intersection over Union (Mean IoU), the Rectified Lin
 
 \subsection{Performance on Training}
 In this work, we observed that the Rectified Linear Unit (ReLu) activation function delivered the best performance among the tested activation functions. ReLu not only facilitated faster convergence but also maintained stability throughout the training epochs. This consistency is likely due to ReLu’s inherent ability to mitigate the vanishing gradient problem, ensuring that the model learns effectively even in deep networks. As shown in \ref{fig:perf_relu}.
-\begin{figure*}[tp]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{relu_perf.png} % Replace with your image file
+    \includegraphics[width=\columnwidth]{relu_perf.png} % Replace with your image file
     \caption{MeanIoU over Training Epoch for ReLu}
     \label{fig:perf_relu}
-\end{figure*}
+\end{figure}
 On the other hand, the Leaky Rectified Linear Unit (Leaky ReLu) showed a slightly slower convergence compared to ReLu. Although it addressed the "dying ReLu" problem by allowing a small, non-zero gradient when the input is negative, this modification did not translate into faster learning. Despite this, Leaky ReLu performed reasonably well and maintained a relatively stable mean Intersection over Union (Mean IoU) metric, although not as consistently as ReLu. As shown in \ref{fig:perf_leaky}.
-\begin{figure*}[tp]
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=0.8\textwidth]{leaky_perf.png} % Replace with your image file
+    \includegraphics[width=\columnwidth]{leaky_perf.png} % Replace with your image file
     \caption{MeanIoU over Training Epoch for LeakyReLu}
     \label{fig:perf_leaky}
-\end{figure*}
+\end{figure}
 Conversely, the tanh activation function gave the poorest performance in our tests. Tanh not only converged the slowest but also showed significant inconsistency throughout the training process. The Mean IoU for tanh fluctuated dramatically, alternately rising and dropping sharply across epochs. This volatility suggests that tanh struggles to maintain a stable learning trajectory, possibly due to its outputs saturating at large values, which worsen the vanishing gradient problem. As shown in \ref{fig:perf_tanh}.
-\begin{figure*}[htbp]
+\begin{figure}[!t]
     \centering
-    \includegraphics[width=0.8\textwidth]{tanh_perf.png} % Replace with your image file
+    \includegraphics[width=\columnwidth]{tanh_perf.png} % Replace with your image file
     \caption{MeanIoU over Training Epoch for tanh}
     \label{fig:perf_tanh}
-\end{figure*}
+\end{figure}
 
 Both Leaky ReLu and tanh demonstrated inconsistency in their Mean IoU metrics during the training epochs. Unlike ReLu, whose performance was consistently robust, Leaky ReLu and tanh alternately rose and fell in their Mean IoU, indicating unstable learning dynamics. This instability can hinder the overall effectiveness of the model, making these activation functions less desirable.
 
@@ -283,15 +283,15 @@ Both Leaky ReLu and tanh demonstrated inconsistency in their Mean IoU metrics du
 
 In this work, we employed the ReLu model with real images sourced from Google Maps, using the Google Maps API. We tested the model on three locations: Shezi District, Abu Dhabi, and another diverse location. Shezi District, with its urban landscape surrounded by small forest areas and a river, presented a varied environment. Abu Dhabi's arid land adjacent to a river provided a stark contrast. The results indicated that the model effectively segmented major areas such as roads, water bodies, and vegetation. However, it struggled with high-detail classes like buildings, leading to segmentation errors. This discrepancy is likely due to the differing characteristics of buildings in Abu Dhabi and Shezi District, highlighting the model's limited tolerance to highly varied data. These findings suggest that while the model performs well overall, improvements are needed to enhance its accuracy for detailed structures across diverse landscapes.
 
-\begin{figure*}[p!]
+\begin{figure*}[!h]
     \centering
-    \begin{subfigure}[t]{\textwidth}
+    \begin{subfigure}[h]{\textwidth}
         \centering
         \includegraphics[width=\textwidth]{gmaps.png} 
         \caption{Prediction Result From Shezi area}
         \label{fig:shezi}
     \end{subfigure}
-    \begin{subfigure}[t]{\textwidth}
+    \begin{subfigure}[h]{\textwidth}
         \centering
         \includegraphics[width=\textwidth]{gmaps2.png} 
         \caption{Prediction Result for Abu Dhabi}
